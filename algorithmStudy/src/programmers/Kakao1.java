@@ -15,61 +15,61 @@ public class Kakao1 {
 		암호화된 배열은 지도의 각 가로줄에서 벽 부분을 1, 공백 부분을 0으로 부호화했을 때 얻어지는 이진수에 해당하는 값의 배열이다.
 	 */
 	public static void main(String[] args) {
-		int[] arr1 = { 9, 20, 28, 18, 11};
+		int[] arr1 = { 0, 0, 0, 0, 0};
 		int[] arr2 = { 30, 1, 21, 17, 28};
 		int n = 5;
 		
 		// 어디서 오류가 났는지 모르겠다.......!!!!!!!!!!!
-//		String[] arr3 = new String[n];
+		String[] arr3 = new String[n];
+		
+		for (int j = 0; j < n; j++) {
+			String num1Str = String.format("%0" + n + "d", Integer.parseInt(Integer.toBinaryString(arr1[j])));
+			String num2Str = String.format("%0" + n + "d", Integer.parseInt(Integer.toBinaryString(arr2[j])));
+			
+			String[] num1Arr = num1Str.split("");
+			System.out.println(Arrays.toString(num1Arr));
+			String[] num2Arr = num2Str.split("");
+			System.out.println(Arrays.toString(num2Arr));
+			String[] num3Arr = new String[n];
+			
+			for (int i = 0; i < n; i++) {
+				num3Arr[i] = num1Arr[i].equals("0") && num2Arr[i].equals("0") ? "0" : "1";
+			}
+			System.out.println(Arrays.toString(num3Arr));
+			
+			for (int i = 0; i < n; i++) {
+				num3Arr[i] = num3Arr[i].equals("1") ? "#" : " ";
+			}
+			System.out.println(Arrays.toString(num3Arr));
+			
+			String total = "";
+			for (int i = 0; i < n; i++) {
+				total += num3Arr[i];
+			}
+			System.out.println(total);
+			arr3[j] = total;
+		}
+		System.out.println(Arrays.toString(arr3));
+		
 //		
-//		for (int j = 0; j < n; j++) {
-//			String num1Str = String.format("%0" + n + "d", Integer.parseInt(Integer.toBinaryString(arr1[j])));
-//			String num2Str = String.format("%0" + n + "d", Integer.parseInt(Integer.toBinaryString(arr2[j])));
-//			
-//			String[] num1Arr = num1Str.split("");
-//			System.out.println(Arrays.toString(num1Arr));
-//			String[] num2Arr = num2Str.split("");
-//			System.out.println(Arrays.toString(num2Arr));
-//			String[] num3Arr = new String[n];
-//			
-//			for (int i = 0; i < n; i++) {
-//				num3Arr[i] = num1Arr[i].equals("0") && num2Arr[i].equals("0") ? "0" : "1";
-//			}
-//			System.out.println(Arrays.toString(num3Arr));
-//			
-//			for (int i = 0; i < n; i++) {
-//				num3Arr[i] = num3Arr[i].equals("1") ? "#" : " ";
-//			}
-//			System.out.println(Arrays.toString(num3Arr));
-//			
-//			String total = "";
-//			for (int i = 0; i < n; i++) {
-//				total += num3Arr[i];
-//			}
-//			System.out.println(total);
-//			arr3[j] = total;
-//		}
-//		System.out.println(Arrays.toString(arr3));
-		
-		
-		 String[] answers = new String[n];
-	        for(int i=0; i<n; i++) {
-	            answers[i] = numberToText(n, arr1[i] | arr2[i]);
-	        }
-	       System.out.println(Arrays.toString(answers));;
-	    }
-
-	    private static String numberToText(int n, int num) {
-	        String text = Integer.toBinaryString(num).replace("0", " ").replace("1", "#");
-	        if (text.length() > n) {
-	            text = text.substring(text.length() - n);
-	        } else if (text.length() < n) {
-	            String padding = "";
-	            for (int i=0; i<n - text.length(); i++) {
-	                padding += " ";
-	            }
-	            text = padding + text;
-	        }
-	        return text;
+//		 String[] answers = new String[n];
+//	        for(int i=0; i<n; i++) {
+//	            answers[i] = numberToText(n, arr1[i] | arr2[i]);
+//	        }
+//	       System.out.println(Arrays.toString(answers));;
+//	    }
+//
+//	    private static String numberToText(int n, int num) {
+//	        String text = Integer.toBinaryString(num).replace("0", " ").replace("1", "#");
+//	        if (text.length() > n) {
+//	            text = text.substring(text.length() - n);
+//	        } else if (text.length() < n) {
+//	            String padding = "";
+//	            for (int i=0; i<n - text.length(); i++) {
+//	                padding += " ";
+//	            }
+//	            text = padding + text;
+//	        }
+//	        return text;
 	}
 }
