@@ -3,7 +3,7 @@ package programmers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Test7 {
+public class Test07 {
 
 	public static void main(String[] args) {
 		/*

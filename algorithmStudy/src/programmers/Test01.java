@@ -1,6 +1,6 @@
 package programmers;
 
-public class Test1 {
+public class Test01 {
 	
 	public static void main(String[] args) {
 		// 완주하지 못한 사람 찾기

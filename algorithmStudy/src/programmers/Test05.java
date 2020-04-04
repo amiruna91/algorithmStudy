@@ -1,6 +1,6 @@
 package programmers;
 
-public class Test5 {
+public class Test05 {
 
 	public static void main(String[] args) {
 		int n = 5;		// n은 총 학생수

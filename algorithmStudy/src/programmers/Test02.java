@@ -3,7 +3,7 @@ package programmers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Test2 {
+public class Test02 {
 
 	public static void main(String[] args) {
 		// 모의고사 : 수포자3명의 찍기 신공중 누가 과연 정답을 더 많이 맞췃나.

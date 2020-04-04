@@ -1,6 +1,6 @@
 package programmers;
 
-public class Test4 {
+public class Test04 {
 	public static void main(String[] args) {
 		// 요일 구하기
 		// 2016년 1월 1일은 금요일이다. 만약 a - 월 , b - 일 이라고 하면 
