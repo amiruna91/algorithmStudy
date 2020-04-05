@@ -1,4 +1,4 @@
-package pjtTest;
+package programmers;
 
 public class Test20 {
 
